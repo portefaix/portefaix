@@ -10,9 +10,16 @@ nats:
   config:
     cluster:
       enabled: true
-
+      replicas: 3
+    leafnodes:
+      enabled: true
+    websocket:
+      enabled: true
+      port: 4223
     jetstream:
       enabled: true
+      merge:
+        domain: default
 
   promExporter:
     enabled: true

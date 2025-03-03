@@ -1,0 +1,22 @@
+# SPDX-FileCopyrightText: Copyright (C) Nicolas Lamirault <nicolas.lamirault@gmail.com>
+# SPDX-License-Identifier: Apache-2.0
+
+---
+wadm:
+  wadm:
+    config:
+      nats:
+        server: "nats://nats-headless.messaging.svc.cluster.local"
+
+# wasmcloud-operator:
+
+wasmApps:
+  opentelemetry:
+    gateway:
+      endpoint: http://opentelemetry-collector-opentelemetry-gateway.opentelemetry.svc.cluster.local:4318
+    # logs:
+    #   endpoint: http://opentelemetry-collector-opentelemetry-gateway.opentelemetry.svc.cluster.local:4318
+    # metrics:
+    #   endpoint: http://opentelemetry-collector-opentelemetry-gateway.opentelemetry.svc.cluster.local:4318
+    # traces:
+    #   endpoint: http://opentelemetry-collector-opentelemetry-gateway.opentelemetry.svc.cluster.local:4318
